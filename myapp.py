@@ -128,7 +128,7 @@ st.image(image)
 
 
 '''
-### :five: Let's put a map of :flag-au:
+### :five: Let's put a map of :flag-au: :earth_asia:
 '''
 with st.echo():
     

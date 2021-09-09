@@ -105,9 +105,11 @@ with st.echo():
 '''
 ### :three: Let's load a dataframe 
 '''
-st.text ('Dataset : /Users/rpghosh/Desktop/stoshops.csv')
+url1 = 'https://github.com/rajarshi-github/Streamlit-example-1/blob/main/stoshops.csv'
 
-df = pd.read_csv('/Users/rpghosh/Desktop/stoshops.csv')
+st.text ('Dataset : ', url1)
+
+df = pd.read_csv(url1)
 with st.echo():
     st.write(df)
     st.write('Info: ', df.info())
@@ -142,8 +144,10 @@ with st.echo():
 '''
 ### :six: Let's put a map of :flag-in: 
 '''
+url2 = 'https://github.com/rajarshi-github/Streamlit-example-1/blob/main/india.csv'
+st.text ('Dataset : ', url2)
 with st.echo():
-    ind = pd.read_csv('/Users/rpghosh/python-examples/india.csv')
+    ind = pd.read_csv(url2)
 
     st.write(ind.head())
     map_ind = ind[['lat','lng']]

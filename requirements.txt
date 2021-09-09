@@ -1,4 +1,6 @@
 pandas
 numpy
 streamlit
+random
+requests
 

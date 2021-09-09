@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import random
+import requests
 
 '''
 
@@ -108,8 +109,8 @@ with st.echo():
 url1 = 'https://github.com/rajarshi-github/Streamlit-example-1/blob/main/stoshops.csv'
 
 st.text ('Dataset : ' + url1)
-
-df = pd.read_csv(url1)
+s1 = requests.get(url1)
+df = pd.read_csv(s1)
 with st.echo():
     st.write(df)
     st.write('Info: ', df.info())
@@ -146,8 +147,9 @@ with st.echo():
 '''
 url2 = 'https://github.com/rajarshi-github/Streamlit-example-1/blob/main/india.csv'
 st.text ('Dataset : ' + url2)
+s2 = requests.get(url2)
 with st.echo():
-    ind = pd.read_csv(url2)
+    ind = pd.read_csv(s2)
 
     st.write(ind.head())
     map_ind = ind[['lat','lng']]

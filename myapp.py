@@ -107,7 +107,7 @@ with st.echo():
 '''
 url1 = 'https://github.com/rajarshi-github/Streamlit-example-1/blob/main/stoshops.csv'
 
-st.text ('Dataset : ', url1)
+st.text ('Dataset : ' + url1)
 
 df = pd.read_csv(url1)
 with st.echo():
@@ -122,10 +122,10 @@ with st.echo():
 ### :four: Let's put an image :camera_with_flash: 
 '''
 
-from PIL import Image
+#from PIL import Image
 
-image = Image.open('/Users/rpghosh/Desktop/python/car.png')
-st.image(image)
+#image = Image.open('/Users/rpghosh/Desktop/python/car.png')
+#st.image(image)
 
 
 
@@ -145,7 +145,7 @@ with st.echo():
 ### :six: Let's put a map of :flag-in: 
 '''
 url2 = 'https://github.com/rajarshi-github/Streamlit-example-1/blob/main/india.csv'
-st.text ('Dataset : ', url2)
+st.text ('Dataset : ' + url2)
 with st.echo():
     ind = pd.read_csv(url2)
 
